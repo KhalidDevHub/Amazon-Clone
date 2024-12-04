@@ -38,7 +38,7 @@ const Header = () => {
             </select>
             <input type="text" name="" id="" placeholder="Search Amazon" />
             {/* icon */}
-            <BsSearch size={25} />
+            <BsSearch size={39} />
           </div>
           <div className={classes.order_container}>
             <Link to="" className={classes.language}>

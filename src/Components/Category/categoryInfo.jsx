@@ -15,8 +15,8 @@ const categoryInfos = [
     imgLink: "https://m.media-amazon.com/images/I/71zck6sHlkL._AC_SX522_.jpg",
   },
   {
-    title: "jewelry",
-    name: " jewelry",
+    title: "jewelery",
+    name: "jewelery",
     imgLink: "https://m.media-amazon.com/images/I/714sw10aBVL._AC_UL320_.jpg",
   },
 ];
