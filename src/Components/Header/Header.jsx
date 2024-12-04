@@ -6,6 +6,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <>
@@ -13,9 +14,9 @@ const Header = () => {
         <div className={classes.header_container}>
           {/* logo section*/}
           <div className={classes.logo_container}>
-            <a href="/">
+            <Link to="/">
               <img src={Logo} alt="amazon logo" />
-            </a>
+            </Link>
 
             {/* delivery */}
             <div className={classes.delivery}>
@@ -40,33 +41,33 @@ const Header = () => {
             <BsSearch size={25} />
           </div>
           <div className={classes.order_container}>
-            <a href="" className={classes.language}>
+            <Link to="" className={classes.language}>
               <img src={FlagUSA} alt="usa flag" />
               <select name="" id="">
                 <option value="">EN</option>
               </select>
-            </a>
+            </Link>
 
             {/* three components */}
-            <a href="">
+            <Link to="">
               <p>Hello, sign in</p>
               <span>
                 <select name="" id="">
                   <option value="">Account & Lists</option>
                 </select>
               </span>
-            </a>
+            </Link>
             {/* Orders */}
-            <a href="">
+            <Link to="/orders">
               <p>Returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
             {/* Cart */}
-            <a href="" className={classes.cart}>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
               <p>Cart</p>
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
