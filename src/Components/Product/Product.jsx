@@ -3,12 +3,13 @@ import axios from 'axios'
 import ProductCard from './ProductCard'
 import classes from './product.module.css'
 import Loader from '../../Components/Loader/Loader'
+import { productUrl } from '../../Api/endPoint'
 const Product = () => {
   const [products,setProducts]=useState([])
   const [isLoading,setIsLoading]=useState(false)
   useEffect(()=>{
     setIsLoading(true)
-    axios.get("https://fakestoreapi.com/products")
+    axios.get(`${productUrl}/products`)
     .then((res)=>{
       // console.log(res);
       setProducts(res.data)

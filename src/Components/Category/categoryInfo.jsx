@@ -7,12 +7,12 @@ const categoryInfos = [
   {
     title: "Discover fashion trends",
     name: "women's clothing",
-    imgLink: "https://m.media-amazon.com/images/I/51gDiOOlTuL._AC_UL320_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/81YWejrugLL._AC_UL320_.jpg",
   },
   {
     title: "Men's Clothing",
     name: "men's clothing",
-    imgLink: "https://m.media-amazon.com/images/I/71zck6sHlkL._AC_SX522_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/7160risTrZL._AC_UL320_.jpg",
   },
   {
     title: "jewelery",
