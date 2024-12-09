@@ -27,7 +27,7 @@ const Product = () => {
       ) : (
         <section className={classes.products_container}>
           {products.map((singleProduct, i) => (
-            <ProductCard product={singleProduct} key={i} />
+            <ProductCard renderAdd={true}product={singleProduct} key={i} />
           ))}
         </section>
       )}
