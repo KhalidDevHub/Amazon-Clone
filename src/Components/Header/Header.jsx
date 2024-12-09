@@ -1,19 +1,20 @@
 import React, { useContext } from "react";
 import classes from "./header.module.css";
 import Logo from "../../assets/images/amazon_PNG11.png";
-import FlagUSA from '../../assets/images/Flag.png'
+import FlagUSA from "../../assets/images/Flag.png";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from '../../Utility/firebase'
 const Header = () => {
-  const [{basket}, dispatch] =useContext(DataContext)
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   // console.log(basket.length);
-  const totalItem = basket?.reduce((amount,item)=>{
-    return item.amount + amount
-  },0)
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <section className={classes.fixed}>
       <section>
@@ -55,13 +56,20 @@ const Header = () => {
             </Link>
 
             {/* three components */}
-            <Link to="">
-              <p>Hello, sign in</p>
-              <span>
-                <select name="" id="">
-                  <option value="">Account & Lists</option>
-                </select>
-              </span>
+            <Link to={!user && "/auth"}>
+              <div>
+                {user ? (
+                  <>
+                    <p>Hello, {user?.email?.split("@")[0]}</p>
+                    <span onClick={()=>auth.signOut()}>Sign out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello, Sign In</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
+              </div>
             </Link>
             {/* Orders */}
             <Link to="/orders">
